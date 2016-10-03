@@ -1,0 +1,42 @@
+\newcommand{\curso}[1]{\def\imprimircurso{#1}}
+
+\newcommand{\longtableendfoot}{Please continue at the next page}
+
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+				keepaspectratio]{figuras/capa.eps}%
+			\vfill
+		}
+	}
+}
+
+\renewcommand{\imprimircapa}{%
+  \begin{capa}
+    \centering
+	\AddToShipoutPicture*{\BackgroundPic}
+    \vspace*{2.7in}
+	{\textbf{\large\imprimirinstituicao}}
+	\par
+	{\textbf{\large\imprimircurso}}
+
+	\vspace{0.5in}
+
+    {\ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo}
+    \vspace*{\fill}
+
+	\begin{flushright}
+    	\textbf{{\large{Autores: \imprimirautor}}}
+	\end{flushright}
+
+    \vspace*{0.2in}
+    \textbf{{\large\imprimirlocal}}
+    \par
+    \textbf{{\large\imprimirdata}}
+
+    \vspace*{2.2in}
+  \end{capa}
+}
